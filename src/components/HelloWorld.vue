@@ -7,8 +7,10 @@
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    msg: "Hi! It's my new website",
+  data() {
+    return {
+      msg: "Hi! It's my new website",
+    };
   },
 };
 </script>
