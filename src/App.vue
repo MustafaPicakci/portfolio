@@ -1,25 +1,20 @@
 <template>
-  <HelloWorld />
+  <router-link tag="button" class="btn btn-primary" :to="{ name: 'profile' }"
+    >profil</router-link
+  >
+  <hr />
+  <router-link tag="button" class="btn btn-primary" :to="{ name: 'education' }"
+    >education</router-link
+  >
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: {},
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
