@@ -8,7 +8,7 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: "Merhaba !",
+    msg: "Hi! It's my new website",
   },
 };
 </script>
