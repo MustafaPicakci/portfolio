@@ -17,11 +17,29 @@
 <script>
 import NavigationMenu from "./components/NavigationMenu";
 import Footer from "./components/Footer";
+import service from "./service/githubService";
 export default {
   name: "App",
   components: { NavigationMenu, Footer },
+  data() {
+    return { res: null };
+  },
+  mounted() {
+    service
+      .getRepositories()
+      .then((r) => {
+        this.res = r.data;
+        console.log(r.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  },
 };
 </script>
+
+
+
 
 <style>
 .route-enter-from {
