@@ -44,7 +44,12 @@
   </div>
 </template>
 <script>
+import chart from "../utils/pieChart";
 export default {
   name: "skills",
+  mounted() {
+    chart.pieChart();
+  },
+  methods: {},
 };
 </script>
