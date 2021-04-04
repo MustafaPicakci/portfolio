@@ -5,7 +5,7 @@
       v-slot="{ href, navigate, isActive }"
       custom
     >
-      <li :class="[isActive && 'router-link-active']">
+      <li :class="[isActive && 'active']">
         <a :href="href" @click="navigate">Profile</a>
       </li>
     </router-link>
@@ -15,7 +15,7 @@
       v-slot="{ href, navigate, isActive }"
       custom
     >
-      <li :class="[isActive && 'router-link-active']">
+      <li :class="[isActive && 'active']">
         <a :href="href" @click="navigate">Education</a>
       </li>
     </router-link>
@@ -25,7 +25,7 @@
       v-slot="{ href, navigate, isActive }"
       custom
     >
-      <li :class="[isActive && 'router-link-active']">
+      <li :class="[isActive && 'active']">
         <a :href="href" @click="navigate">Experiences</a>
       </li>
     </router-link>
@@ -34,7 +34,7 @@
       v-slot="{ href, navigate, isActive }"
       custom
     >
-      <li :class="[isActive && 'router-link-active']">
+      <li :class="[isActive && 'active']">
         <a :href="href" @click="navigate">Skills</a>
       </li>
     </router-link>

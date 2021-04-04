@@ -2,7 +2,11 @@
   <div id="fh5co-main">
     <div class="fh5co-tab-wrap">
       <NavigationMenu></NavigationMenu>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="route" mode="out-in">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
     </div>
     <div class="footer">
       <Footer></Footer>
@@ -20,4 +24,18 @@ export default {
 </script>
 
 <style>
+.route-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.route-enter-active {
+  transition: all 0.9s ease-out;
+}
+.route-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.route-leave-active {
+  transition: all 0.9s ease-in;
+}
 </style>
