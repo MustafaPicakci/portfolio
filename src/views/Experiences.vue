@@ -1,19 +1,17 @@
 <template>
-  <div class="fh5co-tab-content active" data-content="2">
+  <div class="fh5co-tab-content active">
     <div class="fh5co-content-inner">
       <div class="row">
         <div class="col-md-12">
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts.
-          </p>
+          <p>I have the privilege to work with these cool companies.</p>
 
           <div class="fh5co-feature">
             <div class="fh5co-icon">
-              <i class="icon-graduation-cap"></i>
+              <i class="icon-black-tie"></i>
             </div>
             <div class="fh5co-text">
-              <h2>2001-2004</h2>
+              <h2>2008 - Present</h2>
+              <h3>XYZ Inc.</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries.
               </p>
@@ -22,10 +20,11 @@
 
           <div class="fh5co-feature">
             <div class="fh5co-icon">
-              <i class="icon-graduation-cap"></i>
+              <i class="icon-black-tie"></i>
             </div>
             <div class="fh5co-text">
               <h2>2004-2008</h2>
+              <h3>Previous Ltd Co.</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries.
               </p>
@@ -34,10 +33,11 @@
 
           <div class="fh5co-feature">
             <div class="fh5co-icon">
-              <i class="icon-graduation-cap"></i>
+              <i class="icon-black-tie"></i>
             </div>
             <div class="fh5co-text">
-              <h2>2008-2012</h2>
+              <h2>1999-2004</h2>
+              <h3>Previous Ltd Co.</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries.
               </p>
@@ -50,6 +50,6 @@
 </template>
 <script>
 export default {
-  name: "education",
+  name: "experiences",
 };
 </script>
