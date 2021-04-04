@@ -29,13 +29,13 @@ export default {
   transform: translateY(30px);
 }
 .route-enter-active {
-  transition: all 0.9s ease-out;
+  transition: all 0.5s ease-out;
 }
 .route-leave-to {
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(30px);
 }
 .route-leave-active {
-  transition: all 0.9s ease-in;
+  transition: all 0.5s ease-out;
 }
 </style>
