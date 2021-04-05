@@ -8,7 +8,7 @@
               :src="profile.profilePhoto"
               width="140"
               height="140"
-              alt="Free HTML5 Wesbite Template by FreeHTML5.co"
+              alt="Profile Photo"
             />
           </figure>
           <h1>{{ profile.name }} {{ profile.surname }}</h1>
