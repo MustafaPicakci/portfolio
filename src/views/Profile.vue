@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <figure>
             <img
-              src="images/pfp.jpg"
+              :src="profile.profilePhoto"
               width="140"
               height="140"
               alt="Profile Photo"

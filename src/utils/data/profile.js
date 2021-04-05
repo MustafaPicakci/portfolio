@@ -3,6 +3,7 @@ export const profile =
 {
     "name": "Mustafa",
     "surname": "Pıçakçı",
+    "profilePhoto": "images/pfp.png",
     "mainContent": "I love learning new things and using them. So far, I have worked on web, mobile, desktop applications, and deep learning.used Spring Boot and Vue technologies to develop web applications. So when I use these technologies, I feel more free. In the field of Deep Learning, I am still very new, but I am determined to learn.",
 
     "subContent": {
