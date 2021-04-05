@@ -5,7 +5,6 @@ import Profile from "../views/Profile"
 import Education from "../views/Education"
 import Experiences from "../views/Experiences"
 import Skills from "../views/Skills"
-
 const routes = [
     {
         path: "/:catchAll(.*)",
@@ -34,8 +33,8 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
+    history: createWebHistory(process.env.BASE_URL),
+    routes,
 });
 
 export default router;
