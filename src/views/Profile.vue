@@ -5,54 +5,55 @@
         <div class="col-md-12">
           <figure>
             <img
-              src="images/profile_img.png"
+              :src="profile.profilePhoto"
+              width="140"
+              height="140"
               alt="Free HTML5 Wesbite Template by FreeHTML5.co"
             />
           </figure>
-          <h1>Claire Aguilar</h1>
+          <h1>{{ profile.name }} {{ profile.surname }}</h1>
           <p>
-            Born and raised in <a href="#">Brooklyn</a>. Far far away, behind
-            the word mountains, far from the countries Vokalia and Consonantia,
-            there live the blind texts. Separated they live in Bookmarksgrove
-            right at the coast of the <a href="#">Semantics</a>, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia.
+            {{ profile.mainContent }}
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 fh5co-counter">
-          <div class="fh5co-number fh5co-left">10</div>
+          <div class="fh5co-number fh5co-left">
+            {{ profile.subContent.number }}
+          </div>
           <div class="fh5co-text">
-            <h3 class="border-bottom">Years of experience in Web Design</h3>
+            <h3 class="border-bottom">{{ profile.subContent.title }}</h3>
             <p>
-              Far far away, behind the word mountains, far from the countries.
+              {{ profile.subContent.description }}
             </p>
           </div>
         </div>
       </div>
       <ul class="fh5co-social">
         <li>
-          <a href="#"><i class="icon-envelope"></i></a>
+          <a :href="'mailto:' + profile.links.email"
+            ><i class="icon-envelope"></i
+          ></a>
         </li>
         <li>
-          <a href="#"><i class="icon-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="icon-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="icon-google"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="icon-linkedin"></i></a>
+          <a :href="profile.links.linkedin" target="_blank"
+            ><i class="icon-linkedin"></i
+          ></a>
         </li>
       </ul>
     </div>
   </div>
 </template>
 <script>
+import { profile } from "../utils/data/profile";
 export default {
   name: "profile",
+  data() {
+    return {
+      profile: profile,
+    };
+  },
+  mounted() {},
 };
 </script>
