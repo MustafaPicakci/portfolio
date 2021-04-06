@@ -1,3 +1,4 @@
+/*
 ; (function () {
 
 	'use strict';
@@ -62,34 +63,34 @@
 				var $this = $(this),
 					data = $this.data('tab'),
 					pie = $this.data('pie');
-	
+
 				// add/remove active class
 				$('.fh5co-tab-menu li').removeClass('active');
 				$this.closest('li').addClass('active');
-	
+
 				$('.fh5co-tab-content.active').addClass('animated fadeOutDown');
-	
+
 				setTimeout(function(){
 					$('.fh5co-tab-content.active').removeClass('active animated fadeOutDown fadeInUp');
 					$('.fh5co-tab-content[data-content="'+data+'"]').addClass('animated fadeInUp active');
 					getHeight();
 				}, 500);
-	
+
 				if ( pie === 'yes' ) {
 					setTimeout(function(){
 						pieChart();
 					}, 800);
 				}
-				
+
 			})
 		};
 	*/
-	// Document on load.
-	$(function () {
-		tabContainer();
-		//tabClickTrigger();
 
-	});
+/* $(function () {
+	tabContainer();
+	//tabClickTrigger();
+
+}); */
 
 
-}());
+//}());

@@ -38,6 +38,15 @@
         <a :href="href" @click="navigate">Skills</a>
       </li>
     </router-link>
+    <router-link
+      :to="{ name: 'projects' }"
+      v-slot="{ href, navigate, isActive }"
+      custom
+    >
+      <li :class="[isActive && 'active']">
+        <a :href="href" @click="navigate">Projects</a>
+      </li>
+    </router-link>
   </ul>
 </template>
 <script>

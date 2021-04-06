@@ -5,6 +5,8 @@ import Profile from "../views/Profile"
 import Education from "../views/Education"
 import Experiences from "../views/Experiences"
 import Skills from "../views/Skills"
+import Projects from "../views/Projects"
+
 const routes = [
     {
         path: "/:catchAll(.*)",
@@ -29,6 +31,11 @@ const routes = [
         path: "/skills",
         name: "skills",
         component: Skills,
+    },
+    {
+        path: "/projects",
+        name: "projects",
+        component: Projects,
     }
 ]
 
