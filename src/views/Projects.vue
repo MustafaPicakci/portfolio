@@ -12,7 +12,7 @@
             >
               <a :href="p.url" target="_blank">
                 <div class="fh5co-icon">
-                  <i class="icon-black-tie"></i>
+                  <i class="icon-check"></i>
                 </div>
                 <div class="fh5co-text">
                   <h2>{{ p.name }}</h2>
@@ -36,13 +36,6 @@
 export default {
   name: "projects",
   props: ["projects"],
-  data() {
-    return {};
-  },
-  mounted() {
-    console.log(this.projects);
-  },
-  methods() {},
 };
 </script>
 <style scoped>
