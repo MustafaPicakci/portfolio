@@ -41,11 +41,6 @@ export default {
       show: true,
     };
   },
-  watch: {
-    projects(value) {
-      console.log(value);
-    },
-  },
   mounted() {
     setTimeout(() => {
       this.show = false;
