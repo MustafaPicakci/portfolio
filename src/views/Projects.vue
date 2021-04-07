@@ -32,19 +32,36 @@ export default {
     });
   },
   methods: {
-    prepareProjects(repositories) {
+    async prepareProjects(repositories) {
       var tmp = [];
-      for (let r of repositories) {
-        console.log(r);
-        let project = {
-          name: r.name,
-          description: r.description,
-          url: r.html_url,
-        };
 
-        tmp.push(project);
-        this.projects = tmp;
+      for (let r of repositories) {
+        var existsInContributors;
+
+        existsInContributors = await this.checkContributors(r.contributors_url);
+
+        if (existsInContributors) {
+          let project = {
+            name: r.name,
+            description: r.description,
+            url: r.html_url,
+          };
+
+          tmp.push(project);
+        }
       }
+      this.projects = tmp;
+    },
+    async checkContributors(url) {
+      var res = await service.checkContributors(url);
+      var result = false;
+      for (let i of res.data) {
+        if (i.login === "MustafaPicakci") {
+          result = true;
+          break;
+        }
+      }
+      return result;
     },
   },
 };
