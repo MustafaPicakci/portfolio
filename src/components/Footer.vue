@@ -15,3 +15,8 @@
     </div>
   </footer>
 </template>
+<style scoped>
+#fh5co-footer {
+  opacity: 0.5;
+}
+</style>
