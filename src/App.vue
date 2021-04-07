@@ -2,7 +2,7 @@
   <div id="fh5co-main">
     <div class="fh5co-tab-wrap">
       <NavigationMenu></NavigationMenu>
-      <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component }" :projects="projects">
         <transition name="route" mode="out-in">
           <component :is="Component"></component>
         </transition>
@@ -17,14 +17,52 @@
 <script>
 import NavigationMenu from "./components/NavigationMenu";
 import Footer from "./components/Footer";
+import service from "./service/githubService";
 
 export default {
   name: "App",
   components: { NavigationMenu, Footer },
   data() {
-    return {};
+    return { projects: [] };
   },
-  mounted() {},
+  created() {
+    service.getRepositories().then((r) => {
+      this.prepareProjects(r.data);
+    });
+  },
+  methods: {
+    async prepareProjects(repositories) {
+      var tmp = [];
+
+      for (let r of repositories) {
+        var existsInContributors;
+
+        existsInContributors = await this.checkContributors(r.contributors_url);
+
+        if (existsInContributors) {
+          let project = {
+            name: r.name,
+            description: r.description,
+            url: r.html_url,
+          };
+
+          tmp.push(project);
+        }
+      }
+      this.projects = tmp;
+    },
+    async checkContributors(url) {
+      var res = await service.checkContributors(url);
+      var result = false;
+      for (let i of res.data) {
+        if (i.login === "MustafaPicakci") {
+          result = true;
+          break;
+        }
+      }
+      return result;
+    },
+  },
 };
 </script>
 
