@@ -3,7 +3,12 @@
     <div class="fh5co-content-inner">
       <div class="row">
         <div class="col-md-12">
-          <div class="content" v-if="projects.length > 0">
+          <div v-if="!projects.length" class="text-center">
+            <div class="spinner-border text-light" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div class="content" v-else>
             <div
               v-for="p in projects"
               :key="p"
@@ -22,11 +27,6 @@
               ></a>
             </div>
           </div>
-          <div v-else class="text-center">
-            <div class="spinner-border text-light" role="status">
-              <span class="sr-only">Loading...</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -36,6 +36,21 @@
 export default {
   name: "projects",
   props: ["projects"],
+  data() {
+    return {
+      show: true,
+    };
+  },
+  watch: {
+    projects(value) {
+      console.log(value);
+    },
+  },
+  mounted() {
+    setTimeout(() => {
+      this.show = false;
+    }, 10000);
+  },
 };
 </script>
 <style scoped>

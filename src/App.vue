@@ -23,7 +23,10 @@ export default {
   name: "App",
   components: { NavigationMenu, Footer },
   data() {
-    return { projects: [] };
+    return {
+      projects: [],
+      username: process.env.VUE_APP_USERNAME,
+    };
   },
   created() {
     service.getRepositories().then((r) => {
@@ -55,7 +58,7 @@ export default {
       var res = await service.checkContributors(url);
       var result = false;
       for (let i of res.data) {
-        if (i.login === "MustafaPicakci") {
+        if (i.login === this.username) {
           result = true;
           break;
         }

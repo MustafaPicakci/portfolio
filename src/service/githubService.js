@@ -1,7 +1,8 @@
 import axios from "axios";
 export default {
   getRepositories() {
-    return axios.get("https://api.github.com/users/MustafaPicakci/repos", { username: " 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" })
+    var username = process.env.VUE_APP_USERNAME
+    return axios.get(`https://api.github.com/users/${username}/repos`)
   },
 
   getProjectLanguages(url) {
