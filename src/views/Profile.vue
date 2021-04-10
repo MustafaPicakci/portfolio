@@ -54,8 +54,5 @@ export default {
       profile: profile,
     };
   },
-  mounted() {
-    console.log(1);
-  },
 };
 </script>

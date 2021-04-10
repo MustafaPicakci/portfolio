@@ -32,7 +32,6 @@ export default {
     service
       .getRepositories()
       .then((r) => {
-        console.log(r.data);
         this.prepareProjects(r.data);
       })
       .catch((e) => {
