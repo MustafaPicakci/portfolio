@@ -29,9 +29,15 @@ export default {
     };
   },
   created() {
-    service.getRepositories().then((r) => {
-      this.prepareProjects(r.data);
-    });
+    service
+      .getRepositories()
+      .then((r) => {
+        console.log(r.data);
+        this.prepareProjects(r.data);
+      })
+      .catch((e) => {
+        alert(e);
+      });
   },
   methods: {
     async prepareProjects(repositories) {
@@ -42,7 +48,10 @@ export default {
 
         existsInContributors = await this.checkContributors(r.contributors_url);
 
-        if (existsInContributors) {
+        if (
+          existsInContributors &&
+          JSON.stringify(r.description).toLowerCase().includes("project")
+        ) {
           let project = {
             name: r.name,
             description: r.description,
