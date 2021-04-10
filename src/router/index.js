@@ -7,12 +7,8 @@ import Experiences from "../views/Experiences"
 import Skills from "../views/Skills"
 import Projects from "../views/Projects"
 
-const routes = [
-    {
-        path: "/:catchAll(.*)",
-        redirect: "/"
-    },
 
+const routes = [
     {
         path: "/",
         name: "profile",
@@ -37,10 +33,14 @@ const routes = [
         name: "projects",
         component: Projects,
     }
+
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory(process.env.NODE_ENV === 'production'
+
+        ? '/portfolio/'
+        : '/'),
     routes,
 });
 
