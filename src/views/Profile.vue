@@ -55,7 +55,7 @@ export default {
     };
   },
   mounted() {
-    console.log(232);
+    console.log(1);
   },
 };
 </script>
