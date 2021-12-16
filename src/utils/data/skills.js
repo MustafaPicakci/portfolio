@@ -3,19 +3,19 @@ export const skills =
         {
             "skillName": "Team work",
             "percent": "95",
-        },
-        {
-            "skillName": "Vue",
+        }, {
+            "skillName": "Java",
             "percent": "80",
-        },
-        {
+        }, {
             "skillName": "Spring Boot",
             "percent": "75",
         },
         {
-            "skillName": "Java",
+            "skillName": "Vue",
             "percent": "70",
-        }, {
+        },
+
+        {
             "skillName": "Javascript",
             "percent": "60",
         },
@@ -25,12 +25,12 @@ export const skills =
         }
         ,
         {
-            "skillName": "C#",
+            "skillName": ".Net Core",
             "percent": "40",
         },
         {
             "skillName": "Git",
-            "percent": "65",
+            "percent": "70",
         }
         ,
         {

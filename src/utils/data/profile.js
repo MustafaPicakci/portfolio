@@ -12,7 +12,7 @@ export const profile =
         "description": "I have been developing applications since the second year of university, when I reached the ability to create algorithms and use software language."
     },
     "links": {
-        "linkedin": "https://www.linkedin.com/in/mustafa-p%C4%B1%C3%A7ak%C3%A7%C4%B1-4b4525174/",
+        "linkedin": "https://www.linkedin.com/in/mustafapicakci",
         "email": "mustafapicakci25@gmail.com"
     }
 }
