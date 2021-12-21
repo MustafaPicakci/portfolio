@@ -2,7 +2,7 @@ export const skills =
     [
         {
             "skillName": "Team work",
-            "percent": "95",
+            "percent": "85",
         }, {
             "skillName": "Java",
             "percent": "80",
@@ -17,11 +17,11 @@ export const skills =
 
         {
             "skillName": "Javascript",
-            "percent": "60",
+            "percent": "55",
         },
         {
             "skillName": "Python",
-            "percent": "35",
+            "percent": "30",
         }
         ,
         {
@@ -35,7 +35,7 @@ export const skills =
         ,
         {
             "skillName": "Deep Learning",
-            "percent": "35",
+            "percent": "30",
         }
         ,
         {
@@ -49,7 +49,7 @@ export const skills =
         },
         {
             "skillName": "SQL",
-            "percent": "60",
+            "percent": "55",
         }
 
     ]

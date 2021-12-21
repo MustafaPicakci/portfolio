@@ -10,26 +10,26 @@ import Projects from "../views/Projects"
 
 const routes = [
     {
-        path: "/",
+        path: "/portfolio",
         name: "profile",
         component: Profile,
     },
     {
-        path: "/education",
+        path: "/portfolio/education",
         name: "education",
         component: Education,
     }, {
-        path: "/experiences",
+        path: "/portfolio/experiences",
         name: "experiences",
         component: Experiences,
     },
     {
-        path: "/skills",
+        path: "/portfolio/skills",
         name: "skills",
         component: Skills,
     },
     {
-        path: "/projects",
+        path: "/portfolio/projects",
         name: "projects",
         component: Projects,
     }
